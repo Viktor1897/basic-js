@@ -5,7 +5,7 @@ module.exports = function transform(arr) {
   if (!Array.isArray(arr)) throw Exception("The argument is not an array");
 
   for (let i = 0; i < arr.length; i++) {
-//[1, 2, 3, '--discard-next', 1337, '--double-prev', 4, 5]
+
     switch (arr[i]) {
       case '--discard-prev': if(i>0) transformedArr.pop();
         break;
